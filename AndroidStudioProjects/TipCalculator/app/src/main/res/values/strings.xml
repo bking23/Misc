@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="tip_calculator">Tip Calculator</string>
+    <string name="select_tip">Select a tip percentage:</string>
+    <string name="btn_10">10%</string>
+    <string name="btn_20">20%</string>
+    <string name="btn_30">30%</string>
+    <string name="enter_amount">Enter your check amount:</string>
+    <string name="btn_calc">Calculate</string>
+    <string name="error_msg">Error</string>
+</resources>

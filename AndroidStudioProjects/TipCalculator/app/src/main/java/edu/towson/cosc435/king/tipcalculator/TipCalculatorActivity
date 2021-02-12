@@ -1,0 +1,59 @@
+package edu.towson.cosc435.king.tipcalculator
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+import android.widget.Button
+import android.widget.EditText
+import android.widget.RadioGroup
+import android.widget.TextView
+import java.lang.Exception
+
+
+class TipCalculatorActivity : AppCompatActivity() {
+
+    private var calc_btn: Button? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        calc_btn = findViewById(R.id.calc_btn)
+        calc_btn?.setOnClickListener{handleClick()}
+    }
+    private fun handleClick() {
+        val result_tv = findViewById<TextView>(R.id.result)
+        try {
+            val user_input = findViewById<EditText>(R.id.user_input)
+
+            val tempInputString: String = user_input.editableText.toString()
+
+            val radio_group = findViewById<RadioGroup>(R.id.radio_group)
+
+            val selectedId = radio_group.checkedRadioButtonId
+
+            val amount: Tip = when (selectedId) {
+                R.id.rbtn_1 -> Tip.Ten
+                R.id.rbtn_2 -> Tip.Twenty
+                R.id.rbtn_3 -> Tip.Thirty
+
+                else -> throw Exception("Not expected!")
+            }
+            val inputDouble: Double = tempInputString.toDouble()
+
+
+            val result: Double = calcTip(inputDouble, amount)
+
+            val result_two: String = "Your calculated tip is " + result + " and your total is " + result
+
+            val result_tv = findViewById<TextView>(R.id.result)
+            result_tv.text = result_two.toString()
+        } catch (e: Exception){
+            if (e.message != null) {
+                Log.e(TipCalculatorActivity::class.java.simpleName, e.message!!)
+            }
+            result_tv.text = getString(R.string.error_msg)
+        }
+
+    }
+}
