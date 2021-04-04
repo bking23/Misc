@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">EditedLogin</string>
+    <string name="welcome">Welcome to GroupMeet</string>
+    <string name="sign_up_below">Sign up below</string>
+    <string name="login_below">Login below</string>
+    <string name="login_title">Login</string>
+    <string name="sign_up_title">Sign Up</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="where_to_go_title">What would you like to do?</string>
+    <string name="update_meeting_btn">Update Meeting</string>
+    <string name="create_meeting_btn">Create Meeting</string>
+    <string name="exit_btn">Exit</string>
+    <string name="contacts_list">Contacts List</string>
+    <string name="meeting_list">Meeting List</string>
+    <string name="receipt_title">Receipt</string>
+    <string name="selectDateTV">Select A Day of the Week</string>
+    <string name="checkAvailabilityBtn">Check Availability</string>
+    <string name="saveBtn">Save</string>
+    <string name="sundayBtn">Sunday</string>
+    <string name="mondayBtn">Monday</string>
+    <string name="tuesdayBtn">Tuesday</string>
+    <string name="wednesdayBtn">Wednesday</string>
+    <string name="thursdayBtn">Thursday</string>
+    <string name="fridayBtn">Friday</string>
+    <string name="saturdayBtn">Saturday</string>
+    <string name="availableBtn">Available</string>
+    <string name="notAvailableBtn">Not Available</string>
+    <string name="dashes">--</string>
+    <string name="get_city_id_btn">Get City ID</string>
+    <string name="weather_by_id_btn">Weather By ID</string>
+    <string name="weather_by_name_btn">Weather By Name</string>
+    <string name="city_name_hint">City Name</string>
+    <string name="find_out_current_weather_btn">Current Weather Status</string>
+</resources>
